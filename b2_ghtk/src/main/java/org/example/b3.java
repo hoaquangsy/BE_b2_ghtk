@@ -10,12 +10,12 @@ public class b3 {
         int sodau=1;
         int socuoi=10000;
         int tong=0;
-        int socaphientai=0;
-        while ( socaphientai <5000){
+        int i=0;
+        while ( i <10000){
           tong=tong+sodau+socuoi;
           sodau++;
           socuoi--;
-          socaphientai++;
+          i++;
         }
         return tong;
     }
@@ -24,8 +24,8 @@ public class b3 {
         int sodau=1;
         int socuoi=10000;
         int tong=0;
-        int socaphientai=0;
-        for (socaphientai=0; socaphientai <5000;socaphientai++){
+        int i=0;
+        for (i=0; i <10000;i++){
             tong=tong+sodau+socuoi;
             sodau++;
             socuoi--;
@@ -37,13 +37,13 @@ public class b3 {
         int sodau=1;
         int socuoi=10000;
         int tong=0;
-        int socaphientai=0;
+        int i=0;
         do {
             tong=tong+sodau+socuoi;
             sodau++;
             socuoi--;
-            socaphientai++;
-        }while ( socaphientai <5000);
+            i++;
+        }while ( i <10000);
 
         return tong;
     }

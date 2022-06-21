@@ -11,7 +11,7 @@ public class b1_c2 {
             this.value = value;
         }
         }
-        
+
 
     public void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
