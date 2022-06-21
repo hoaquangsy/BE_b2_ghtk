@@ -4,55 +4,44 @@ import java.util.Scanner;
 
 public class b1_c2 {
     enum Thang {
-        thangle(1),
-        thangchan(3),
-        thang2(2);
-
+        THANG1(31), THANG3(31), THANG5(31), THANG7(31), THANG8(31), THANG10(31), THANG12(31), THANG4(30), THANG6(30),
+        THANG9(30), THANG11(30), THANG2(28);
         private int value;
         private Thang(int value) {
             this.value = value;
         }
         }
+        
 
-        class Check{
-        Thang thangEnum;
-          public  Check(Thang thangEnum){
-            this.thangEnum=thangEnum;
-          }
-
-          public void CountDay(){
-              switch (thangEnum){
-                  case thang2:
-                      System.out.println("28 ngày");
-                      break;
-                  case thangle:
-                      System.out.println("31 ngày");
-                       break;
-                  case  thangchan:
-                      System.out.println("30 ngày");
-                      break;
-                  default:
-                     System.out.println("Nhập tháng");
-                     break;
-              }
-          }
-
-        }
     public void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
         System.out.println("Nhập tháng");
-        int thang=Integer.parseInt(scanner.nextLine());
-        int du=thang%2;
+        String thangNhap=scanner.nextLine();
 
-        if (thang==2){
-            Check check= new Check(Thang.thang2);
-            check.CountDay();
-        } else if (du==0) {
-            Check check= new Check(Thang.thangchan);
-            check.CountDay();
-        }else {
-            Check check= new Check(Thang.thangle);
-            check.CountDay();
+        Thang thangEnum= Thang.values()[Integer.parseInt(thangNhap)-1];
+
+        switch (thangEnum){
+            case THANG1:
+            case THANG3:
+            case THANG5:
+            case THANG7:
+            case THANG8:
+            case THANG10:
+            case THANG12:
+                System.out.println("Số ngày"+thangEnum.value);
+                break;
+            case THANG4:
+            case THANG6:
+            case THANG9:
+            case THANG11:
+                System.out.println("Số ngày"+thangEnum.value);
+                break;
+            case THANG2:
+                System.out.println("Số ngày"+thangEnum.value);
+                break;
+            default:
+                System.out.println("Số ngày"+thangEnum.value);
+                break;
         }
     }
 }

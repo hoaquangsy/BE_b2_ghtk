@@ -13,20 +13,33 @@ public class b1_c1
         Scanner scanner= new Scanner(System.in);
         System.out.println("Nhập tháng");
         int thang=Integer.parseInt(scanner.nextLine());
-        int du=thang%2;
-        if (thang==2){
-            System.out.println("28 ngày");
-            return;
-        }
-        switch (du){
+
+        switch (thang){
             case 1:
-                System.out.println("31 ngày");
-                break;
-            case 0:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            System.out.println("31 ngày");
+            break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
                 System.out.println("30 ngày");
                 break;
+            case 2:
+                System.out.println("28 ngày");
+                break;
+            default:
+                System.out.println("Không hợp lệ");
+                break;
+
+        }
 
         }
 
     }
-}
+
